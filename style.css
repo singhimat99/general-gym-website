@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(83, 102, 156, 0.7),
+      rgba(10, 27, 97, 0.7)
+    ),
+    url(images/gym_view.jpg);
+  background-position: center;
+  background-size: cover;
+  /* basically saying cover entire page with image  */
+  position: relative;
+}
+.logo {
+  width: 125px;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: -15px;
+  left: -7px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 4%;
+}
+
+.nav-links {
+  text-align: right;
+}
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.nav-links ul li {
+  list-style: none;
+  color: white;
+  padding: 0.5rem;
+  position: relative;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  color: white;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: lightskyblue;
+  /* border-radius: 25%; */
+  display: block;
+  margin: auto;
+  transition: 0.4s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.textbox {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.textbox h1 {
+  font-size: 2.5rem;
+}
+.textbox p {
+  font-size: 1rem;
+  margin: 0.75rem 0 1.5rem;
+}
+.action-btn {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+}
+.action-btn:hover {
+  color: black;
+  background-color: white;
+}
