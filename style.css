@@ -3,6 +3,10 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
+:root {
+  --darker-blue: rgb(20, 45, 144);
+  --lighter-blue: lightskyblue;
+}
 /* background pic  */
 .header {
   min-height: 100vh;
@@ -57,7 +61,7 @@ nav {
   content: "";
   width: 0%;
   height: 2px;
-  background: lightskyblue;
+  background: var(--lighter-blue);
   /* border-radius: 25%; */
   display: block;
   margin: auto;
@@ -117,14 +121,41 @@ nav {
   display: inline-block;
   color: white;
   background-color: transparent;
-  border: 1px solid white;
   padding: 0.5rem 1rem;
+  border: 1px solid white;
+  font-size: 1.5rem;
 }
 .action-btn:hover {
-  color: black;
-  background-color: white;
+  border: 1px solid var(--lighter-blue);
+  color: var(--darker-blue);
+  background-color: var(--lighter-blue);
+}
+.services {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding-top: 10vh;
+  border: 2px solid black;
 }
 
+.services h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.services p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.services .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.services .row .service-col {
+  margin: 1rem;
+}
 /* responsive mobile  */
 @media (max-width: 700px) {
   .textbox h1 {
@@ -138,7 +169,7 @@ nav {
     display: block;
   }
   nav {
-    background: rgb(20, 45, 144);
+    background: var(--darker-blue);
     height: 30px;
   }
   .logo {
@@ -146,7 +177,7 @@ nav {
   }
   .nav-links {
     position: absolute;
-    background: rgb(20, 45, 144);
+    background: var(--darker-blue);
     height: 100vh;
     width: 50%;
     text-align: left;
@@ -158,6 +189,7 @@ nav {
   }
   .nav-links ul {
     flex-direction: column;
+    padding: 2rem;
   }
   .hamburger {
     display: flex;
@@ -165,5 +197,8 @@ nav {
   .nav-links.active {
     transform: translateX(0%);
     transition: transform 1s;
+  }
+  .action-btn {
+    font-size: 3vw;
   }
 }
